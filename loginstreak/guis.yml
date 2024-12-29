@@ -1,0 +1,59 @@
+#
+# Copy the content of this file to your UltimateRewards/guis.yml
+#
+loginstreak-first:
+  title: ʟᴏɢɪɴsᴛʀᴇᴀᴋ &7(1/2)
+  rows: 6
+  command: loginstreak
+  content:
+    '10':
+      item: skullofplayer
+      name: '&eɪɴғᴏʀᴍᴀᴛɪᴏɴs'
+      lore:
+        - '&8 • &7ᴛʜᴇ ʀᴇᴡᴀʀᴅ ɪs ᴀʟᴡᴀʏs ʀᴇsᴇᴛ ᴀᴛ 00:00 (ᴍɪᴅɴɪɢʜᴛ)'
+        - '&8 • &7sᴛʀᴇᴀᴋ ᴅᴀʏ: &e%ultimaterewards_current_streak_loginstreak%&8/&e31'
+    '19': loginstreak:1
+    '28': loginstreak:2
+    '37': loginstreak:3
+    '38': loginstreak:4
+    '39': loginstreak:5
+    '30': loginstreak:6
+    '21': loginstreak:7
+    '12': loginstreak:8
+    '13': loginstreak:9
+    '14': loginstreak:10
+    '23': loginstreak:11
+    '32': loginstreak:12
+    '33': loginstreak:13
+    '34': loginstreak:14
+    '25': loginstreak:15
+    '16': loginstreak:16
+    '17': loginstreak:17
+    '53':
+      item: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTY2ZTgyYzlhZDNkNjA1NjYyZDVkZDRjNTEyNjBhNDNmMDVlMTllNmZiZTg3YWNlZjkwYzViZTRlZjllNTVlZSJ9fX0=
+      name: <#D3FE3E>Next page
+      action: '[open] loginstreak-second'
+
+loginstreak-second:
+  title: ʟᴏɢɪɴsᴛʀᴇᴀᴋ &7(2/2)
+  rows: 6
+  command: loginstreak
+  content:
+    '9': loginstreak:18
+    '10': loginstreak:19
+    '19': loginstreak:20
+    '28': loginstreak:21
+    '37': loginstreak:22
+    '38': loginstreak:23
+    '39': loginstreak:24
+    '30': loginstreak:25
+    '21': loginstreak:26
+    '12': loginstreak:27
+    '13': loginstreak:28
+    '14': loginstreak:29
+    '23': loginstreak:30
+    '32': loginstreak:31
+    '52':
+      item: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjg5ZGI1NmJmMThjYzEzYzExY2M0ZWMwODk3NzQyOGVlMGZkOGU2MDg2YThlMjI2MzRhYjI2ZWVlMTZmMmVlZiJ9fX0=
+      name: <#D3FE3E>Previous Page
+      action: '[open] loginstreak-first'

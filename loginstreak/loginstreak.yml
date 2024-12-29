@@ -1,0 +1,339 @@
+# Decides if rewards will be claimable.
+enabled: true
+#
+# Each type of reward has different specifications.
+# All currently supported types can be found on:
+# https://revivalo.gitbook.io/ultimaterewards/
+#
+type: streak_fixed_reward
+#
+# Reward tag
+#
+tag: Loginstreak reward
+# What time of the day to reset the reward.
+# (18:00 -> 6:00 PM)
+reset-time: '00:00'
+# You can set the numbering type. Available types:
+#   - NORMAL
+#   - ROMAN
+numbering-type: NORMAL
+#
+# (Optional) Permission which player must have to be
+# able to obtain this reward.
+#
+permission: ultimaterewards.loginStreak
+#
+# Format which will be used to show the
+# general cooldown of this reward.
+#
+cooldown-general-format: "%hours% hours"
+#
+# Format of the cooldown that will be displayed
+# on the usage of the %cooldown% placeholder in reward GUIs.
+#
+cooldown-format: '%hours%:%minutes%:%seconds%'
+#
+# If set to true, the streak progress will reset if
+# the player misses the claim schedule.
+#
+resetting: true
+#
+# If resetting is set to false, you can specify
+# whether it should be reset when the player reaches the final streak.
+#
+reset-after-completing: true
+# Notifies players that the reward is currently available
+live-reminder-enabled: true
+# Make the reward available for the player
+# after their first join on the server.
+available-after-first-join: true
+#
+# Sets the number of items in the GUI menu
+# according to the corresponding streak.
+#
+show-amount-of-the-streaks: false
+#
+# NOTE THAT ITEM & SOUND NAMES ARE SLIGHTLY DIFFERENT BETWEEN <1.12 & 1.13< VERSIONS!
+# SO MAKE SURE YOU ARE USING VALID ITEM NAMES (DEFAULT ONES ARE USED FROM 1.13+ VERSIONS)
+# OTHERWISE, THEY WILL BE REPLACED BY STONE IF AN INVALID NAME IS USED.
+#
+# When the player can claim this reward,
+# it will be shown as this:
+#
+# %lore% will be replaced with each streak's lore
+# defined at the bottom of the page.
+available-item: LIME_STAINED_GLASS_PANE
+available-glow: true
+available-display-name: '&a&lᴅᴀʏ #%number%'
+available-lore:
+  - ' '
+  - '%lore%'
+  - ' '
+  - '&b► ʀᴇᴀᴅʏ ᴛᴏ ʙᴇ ᴄʟᴀɪᴍᴇᴅ'
+# When the player can't claim this reward right now,
+# it will be shown as this:
+unavailable-item: YELLOW_STAINED_GLASS_PANE
+unavailable-display-name: '&e&lᴅᴀʏ #%number%'
+unavailable-lore:
+  - ' '
+  - '%lore%'
+  - ' '
+  - '&e ► ᴀᴠᴀɪʟᴀʙʟᴇ ɪɴ %cooldown%'
+# The next streak reward will be marked, and
+# it will be shown as this:
+upcoming-item: BLACK_STAINED_GLASS_PANE
+upcoming-display-name: '&8&lᴅᴀʏ #%number%'
+upcoming-lore:
+  - ' '
+  - '%lore%'
+  - ' '
+  - '&c✕ ᴄʟᴀɪᴍ ʀᴇᴡᴀʀᴅs ʙᴇғᴏʀᴇ'
+# The claimed streak will be shown as this:
+claimed-item: GREEN_STAINED_GLASS_PANE
+claimed-display-name: '&7&m&lᴅᴀʏ #%number%'
+claimed-lore:
+  - ' '
+  - '%lore%'
+  - ' '
+  - '&7✓ ᴀʟʀᴇᴀᴅʏ ᴄʟᴀɪᴍᴇᴅ'
+#
+# When the player doesn't have the reward's permission,
+# the following properties will be shown.
+#
+no-permission-item: RED_STAINED_GLASS_PANE
+no-permission-display-name: "&4&lᴅᴀʏ #%number%"
+no-permission-lore:
+  - "&c ✕ Locked, requires"
+  - "&c   %permission% permission"
+#
+# A streak can have an optional length,
+# generally, when creating a streak, you should follow
+# this pattern:
+#
+# 1: # first streak
+#   use-firework: <true/false> # optional value
+#   actions: # List of actions executed after claiming a reward
+#     - <| list of actions |>
+# 2: # second streak
+#    <| another streak reward configurations |>
+#
+streaks:
+  1:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $1000'
+    actions:
+      - "[console] eco give %player% 1000"
+      - "[subtitle] &aObtained 1st day!"
+  2:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $1100'
+    actions:
+      - "[console] eco give %player% 1100"
+      - "[subtitle] &aObtained 2nd day!"
+  3:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $1200'
+    actions:
+      - "[console] eco give %player% 1200"
+      - "[subtitle] &aObtained 3rd day!"
+  4:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $1300'
+    actions:
+      - "[console] eco give %player% 1300"
+      - "[subtitle] &aObtained 4th day!"
+  5:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $1400'
+    actions:
+      - "[console] eco give %player% 1400"
+      - "[subtitle] &aObtained 5th day!"
+  6:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $1500'
+    actions:
+      - "[console] eco give %player% 1500"
+      - "[subtitle] &aObtained 6th day!"
+  7:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $1600'
+    actions:
+      - "[console] eco give %player% 1600"
+      - "[subtitle] &aObtained 7th day!"
+  8:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $1700'
+    actions:
+      - "[console] eco give %player% 1700"
+      - "[subtitle] &aObtained 8th day!"
+  9:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $1800'
+    actions:
+      - "[console] eco give %player% 1800"
+      - "[subtitle] &aObtained 9th day!"
+  10:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $1900'
+    actions:
+      - "[console] eco give %player% 1900"
+      - "[subtitle] &aObtained 10th day!"
+  11:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $2000'
+    actions:
+      - "[console] eco give %player% 2000"
+      - "[subtitle] &aObtained 11th day!"
+  12:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $2100'
+    actions:
+      - "[console] eco give %player% 2100"
+      - "[subtitle] &aObtained 12th day!"
+  13:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $2200'
+    actions:
+      - "[console] eco give %player% 2200"
+      - "[subtitle] &aObtained 13th day!"
+  14:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $2300'
+    actions:
+      - "[console] eco give %player% 2300"
+      - "[subtitle] &aObtained 14th day!"
+  15:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $2400'
+    actions:
+      - "[console] eco give %player% 2400"
+      - "[subtitle] &aObtained 15th day!"
+  16:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $2500'
+    actions:
+      - "[console] eco give %player% 2500"
+      - "[subtitle] &aObtained 16th day!"
+  17:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $2600'
+    actions:
+      - "[console] eco give %player% 2600"
+      - "[subtitle] &aObtained 17th day!"
+  18:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $2700'
+    actions:
+      - "[console] eco give %player% 2700"
+      - "[subtitle] &aObtained 18th day!"
+  19:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $2800'
+    actions:
+      - "[console] eco give %player% 2800"
+      - "[subtitle] &aObtained 19th day!"
+  20:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $2900'
+    actions:
+      - "[console] eco give %player% 2900"
+      - "[subtitle] &aObtained 20th day!"
+  21:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $3000'
+    actions:
+      - "[console] eco give %player% 3000"
+      - "[subtitle] &aObtained 21th day!"
+  22:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $3100'
+    actions:
+      - "[console] eco give %player% 3100"
+      - "[subtitle] &aObtained 22th day!"
+  23:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $3200'
+    actions:
+      - "[console] eco give %player% 3200"
+      - "[subtitle] &aObtained 23th day!"
+  24:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $3300'
+    actions:
+      - "[console] eco give %player% 3300"
+      - "[subtitle] &aObtained 24th day!"
+  25:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $3400'
+    actions:
+      - "[console] eco give %player% 3400"
+      - "[subtitle] &aObtained 25th day!"
+  26:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $3500'
+    actions:
+      - "[console] eco give %player% 3500"
+      - "[subtitle] &aObtained 26th day!"
+  27:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $3600'
+    actions:
+      - "[console] eco give %player% 3600"
+      - "[subtitle] &aObtained 27th day!"
+  28:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $3700'
+    actions:
+      - "[console] eco give %player% 3700"
+      - "[subtitle] &aObtained 28th day!"
+  29:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $3800'
+    actions:
+      - "[console] eco give %player% 3800"
+      - "[subtitle] &aObtained 29th day!"
+  30:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $3900'
+    actions:
+      - "[console] eco give %player% 3900"
+      - "[subtitle] &aObtained 30th day!"
+  31:
+    lore:
+      - '&7ᴄᴏɴᴛᴀɪɴs:'
+      - '&e ➪ $4000'
+    actions:
+      - "[console] eco give %player% 4000"
+      - "[title] &bGreat Job!"
+      - "[subtitle] &aObtained final streak!"
+      - "[firework] colors:{FF0000;00FF00;0000FF},type:BALL_LARGE,power:3"
