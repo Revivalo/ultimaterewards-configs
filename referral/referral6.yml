@@ -1,0 +1,108 @@
+# Decides if rewards will be claimable.
+enabled: true
+#
+# Each type of reward has different specifications.
+# All currently supported types can be found on:
+# https://revivalo.gitbook.io/ultimaterewards/
+#
+type: referral_reward
+#
+# Reward tag
+#
+tag: Referral 6th Level
+#
+# (Optional) Permission which player must have to be
+# able to obtain this reward.
+#
+permission: ultimaterewards.referralReward
+#
+# Required referred players to achieve this reward.
+#
+required-uses: 20
+# Notifies players that the reward is currently available
+live-reminder-enabled: true
+#
+# NOTE THAT ITEM & SOUND NAMES ARE SLIGHTLY DIFFERENT BETWEEN >1.12 & 1.13< VERSIONS!
+# SO MAKE SURE YOU ARE USING VALID ITEM NAMES (DEFAULT ONE ARE USED FROM 1.13+ VERSIONS)
+# OTHERWISE WILL BE REPLACED BY STONE IF INVALID NAME IS IN USE.
+#
+# When the player achieves the required number of referred players,
+# this version of the reward item is displayed in the inventory:
+#
+available-item: "BLUE_CANDLE"
+available-glow: true
+available-display-name: "<#4481eb>#6 &lʀᴇғᴇʀʀᴀʟ ʀᴀɴᴋ</#04befe>"
+available-lore:
+  - "&7ʀᴇᴏ̨ᴜɪʀᴇᴍᴇɴᴛ:"
+  - " &a✓  &mɪɴᴠɪᴛᴇ %amount% ᴘʟᴀʏᴇʀs"
+  - ' '
+  - '&7ᴄᴏɴᴛᴀɪɴs:'
+  - '&7 ➪ 64ˣ xᴘ ʙᴏᴛᴛʟᴇ'
+  - ' '
+  - "&b► ᴄʟɪᴄᴋ ᴛᴏ ʀᴇᴅᴇᴇᴍ"
+#
+# Whereas the player doesn't have enough referred players,
+# this version of the reward item is displayed in the inventory:
+#
+unavailable-item: "BLUE_CANDLE"
+unavailable-display-name: "<#4481eb>#6 &lʀᴇғᴇʀʀᴀʟ ʀᴀɴᴋ</#04befe>"
+unavailable-lore:
+  - "&7ʀᴇᴏ̨ᴜɪʀᴇᴍᴇɴᴛ:"
+  - " &f•  ɪɴᴠɪᴛᴇ %amount% ᴘʟᴀʏᴇʀs"
+  - ' '
+  - '&7ᴄᴏɴᴛᴀɪɴs:'
+  - '&7 ➪ 16ˣ xᴘ ʙᴏᴛᴛʟᴇ'
+  - ' '
+  - '&4► ᴛᴏ ᴜɴʟᴏᴄᴋ ʏᴏᴜ ɴᴇᴇᴅ ᴛᴏ ɪɴᴠɪᴛᴇ'
+  - '&4  %players% ᴍᴏʀᴇ ᴘʟᴀʏᴇʀs'
+#
+# When the player has already claimed this reward:
+#
+claimed-item: "BLUE_CANDLE"
+claimed-display-name: "<#4481eb>#6 &lʀᴇғᴇʀʀᴀʟ ʀᴀɴᴋ</#04befe>"
+claimed-lore:
+  - ' '
+  - '&7ᴄᴏɴᴛᴀɪɴᴇᴅ:'
+  - '&7 &m➪ 64ˣ XP Bottle'
+  - ' '
+  - "&7✓ ᴀʟʀᴇᴀᴅʏ ʀᴇᴅᴇᴇᴍᴇᴅ"
+#
+# When the player doesn't have permission for this reward,
+# the following properties will be shown.
+#
+no-permission-item: BARRIER
+no-permission-display-name: "&c#6 ʀᴇғᴇʀʀᴀʟ ʀᴀɴᴋ"
+no-permission-lore:
+  - '&c ✕ ʟᴏᴄᴋᴇᴅ, ʀᴇᴏ̨ᴜɪʀᴇs'
+  - '&c   %permission% ᴘᴇʀᴍɪssɪᴏɴ'
+#
+# Commands list that will be executed after the player
+# obtains this reward.
+# All available actions can be found at
+# https://revivalo.gitbook.io/ultimaterewards/
+#
+# Format: () - optional value | [] - required value
+#   [<actionType>] (<chance>):<command>
+#
+# Examples:
+#   - [console] 50:give %player% diamond 1
+#       - this command will have a 50%
+#         execution chance due to its property value
+#
+#   - [message] "&aYou have claimed your %type% reward!"
+#       - this action will send the player a message
+#         with the defined content
+#
+# You can also use the random placeholders
+# from the randoms.yml file and use them in commands.
+# Example:
+#   - give %player% iron_ingot %exampleRandom%
+#       - the placeholder will be replaced by
+#         a random number from the defined interval in randoms.yml
+#
+actions:
+  - '[console] give %player% experience_bottle 64'
+  - '[console] say %player% claimed his %type% reward!'
+  #  - '[actionbar] &aSuccessfully claimed!' # Action bar can be used only from 1.12 versions!
+  - '[title] &aClaimed'
+  - '[subtitle] &aReward %type%'

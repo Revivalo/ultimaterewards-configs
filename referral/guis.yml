@@ -1,0 +1,31 @@
+#
+# Copy the content of this file to your UltimateRewards/guis.yml
+#
+referrals:
+  title: ʀᴇғᴇʀʀᴀʟs
+  rows: 4
+  content:
+    '10':
+      item: ENCHANTED_BOOK
+      name: <#92fe9d>&lʀᴇғᴇʀʀᴀʟ ʀᴇᴡᴀʀᴅs</#00c9ff>
+      lore:
+        - '&fɪɴᴠɪᴛᴇ ʏᴏᴜʀ ғʀɪᴇɴᴅs ᴛᴏ ᴛʜᴇ sᴇʀᴠᴇʀ!'
+        - '&fᴡʜᴇɴ ᴛʜᴇʏ ᴊᴏɪɴ, ᴛʜᴇʏ ᴄᴀɴ ᴜsᴇ &e/ʀᴇғ %player_name%'
+        - '&fᴛᴏ ᴄʟᴀɪᴍ ᴀ ʀᴇᴡᴀʀᴅ.'
+        - ' '
+        - '&fɪғ ʏᴏᴜʀ ʀᴇғᴇʀʀᴇᴅ ғʀɪᴇɴᴅ ᴘʟᴀʏs ғᴏʀ'
+        - '&f&nᴀᴛ ʟᴇᴀsᴛ 10 ᴍɪɴᴜᴛᴇs&f, ᴛʜᴇʏ ᴡɪʟʟ ʀᴇᴄᴇɪᴠᴇ &6$1,000&f, ᴀɴᴅ'
+        - '&fʏᴏᴜ ᴡɪʟʟ ᴘʀᴏɢʀᴇss ғᴜʀᴛʜᴇʀ ɪɴ ᴛʜᴇ ʀᴇғᴇʀʀᴀʟ ʀᴇᴡᴀʀᴅs ᴘʀᴏɢʀᴀᴍ!'
+    '19':
+      item: skullofplayer
+      name: '&a&lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      lore:
+        - '%ultimaterewards_referrals%'
+    '12': referral1
+    '13': referral2
+    '14': referral3
+    '15': referral4
+    '21': referral5
+    '22': referral6
+    '23': referral7
+    '24': referral8
