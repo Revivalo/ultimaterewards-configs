@@ -1,7 +1,7 @@
 # UltimateRewards Configs
 Config premades &amp; examples for UltimateRewards plugin
 
-### Note that level system requires [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) installed
+### Note that levels requires [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) installed
 
 ## Setup guide
 1. Copy the content from the downloaded guis.yml file to yours guis.yml
