@@ -23,6 +23,9 @@ requirements:
     expression: "%ultimaterewards_playtime_local_in_hours% >= 600"
     remaining-expression: "600 - %ultimaterewards_playtime_local_in_hours%"
 
+required-rewards:
+  - "level_13"
+
 #
 # (Optional) Permission which player must have to be
 # able to obtain this reward.
@@ -65,6 +68,11 @@ unavailable-lore:
   - " &e⇒ &fᴄʟᴀɪᴍ ʙʟᴏᴄᴋs &a+500"
   - " "
   - " &c❌ ʀᴇᴏ̨ᴜɪʀᴇᴍᴇɴᴛs ᴀʀᴇ ɴᴏᴛ ᴍᴇᴛ"
+not-reached-item: BARRIER
+not-reached-display-name: "&c&l&mʟᴇᴠᴇʟ 14"
+not-reached-lore:
+  - "&c ✕ You need to unlock & claim following reward(s):"
+  - "&c   %requiredRewards%"
 #
 # When player already claimed this reward:
 #

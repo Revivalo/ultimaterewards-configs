@@ -23,6 +23,9 @@ requirements:
     expression: "%ultimaterewards_playtime_local_in_hours% >= 2"
     remaining-expression: "2 - %ultimaterewards_playtime_local_in_hours%"
 
+required-rewards:
+  - "level_1"
+
 #
 # (Optional) Permission which player must have to be
 # able to obtain this reward.
@@ -68,6 +71,11 @@ unavailable-lore:
 #
 # When player already claimed this reward:
 #
+not-reached-item: BARRIER
+not-reached-display-name: "&c&l&mʟᴇᴠᴇʟ 2"
+not-reached-lore:
+  - "&c ✕ You need to unlock & claim following reward(s):"
+  - "&c   %requiredRewards%"
 claimed-item: "GRAY_DYE"
 claimed-display-name: "&7&lʟᴇᴠᴇʟ 2"
 claimed-lore:
